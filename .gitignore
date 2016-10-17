@@ -2,3 +2,5 @@
 /images
 db.json
 /node_modules
+debug.log
+/public
