@@ -1,0 +1,13 @@
+#+TITLE: cobal
+#+AUTHOR: yssource
+#+EMAIL: yssource@163.com
+#+DATE: <2016-10-17 Mon 21:46:30>
+#+LAYOUT: post
+#+TAGS: cobal
+#+CATEGORIES: cobal programming
+#+DESCRIPTON: coboal language
+
+* coboal language
+- when
+- why
+- how

@@ -1,11 +1,11 @@
 #+TITLE: dd
-             #+AUTHOR: yssource
-             #+EMAIL: yssource@163.com
-             #+DATE: <2016-10-17 Mon 17:00>
-             #+LAYOUT: post
-             #+TAGS:
-             #+CATEGORIES:
-             #+DESCRIPTON:
+#+AUTHOR: yssource
+#+EMAIL: yssource@163.com
+#+DATE: <2016-10-17 Mon 17:00>
+#+LAYOUT: post
+#+TAGS:
+#+CATEGORIES:
+#+DESCRIPTON:
 * dd learning
 
 #+BEGIN_HTML

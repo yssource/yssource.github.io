@@ -1,11 +1,11 @@
 #+TITLE: python
-             #+AUTHOR: yssource
-             #+EMAIL: yssource@163.com
-             #+DATE: 2016-10-17
-             #+LAYOUT: post
-             #+TAGS: python
-             #+CATEGORIES: python
-             #+DESCRIPTON: python programing
+#+AUTHOR: yssource
+#+EMAIL: yssource@163.com
+#+DATE: 2016-10-17
+#+LAYOUT: post
+#+TAGS: python
+#+CATEGORIES: python
+#+DESCRIPTON: python programing
 * python learningpython learning
 - why
 - what

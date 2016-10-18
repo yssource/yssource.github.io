@@ -4,10 +4,11 @@
 
 # Site
 title: Hexo
-subtitle:
-description:
-author: John Doe
-language:
+subtitle: Magento
+description: 团结紧张, 自由活泼
+author: Jimmy m Gong
+language: zh-Hans
+# language: en
 timezone:
 
 # URL
@@ -70,7 +71,7 @@ theme: next
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
   type: git
-  repo: git@github.com:yssource/jimmy.github.io.git
+  repo: git@github.com:yssource/yssource.github.io.git
   branch: master
 
   emacs: '/usr/bin/emacs'
