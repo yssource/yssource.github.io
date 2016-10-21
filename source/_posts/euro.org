@@ -14,6 +14,22 @@
 - when
 - why
 - how
+-
+* Development Environment
+- fc24.x86_64
+- GNU Emacs 25.1.1
+- "hexo-renderer-org": "^0.2.4",
+* Reproduce
+creating a new post with file name "test2.org"
+    #+BEGIN_SRC javascript
+    M-x blog-admin-start w
+    #+END_SRC
+* Result
+#+BEGIN_SRC javascript
+XXX==Error Here==>/var/www/org/blog/source/_drafts/test2.org:
+#+END_SRC
+* Test on travis-ci.org
+[[file:Screenshot%20from%202016-10-21%2018-09-50.png][Fail on Travis-cli.org]]
 
 #+BEGIN_HTML
 <!--more-->

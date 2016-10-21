@@ -32,8 +32,8 @@ install:
 # 部署的命令
 script:
   # - npm run deploy  # hexo clean && hexo g -d
-  # - hexo clean && hexo g -d
-  - hexo g
+  - hexo clean && hexo g -d
+  # - hexo g
   # - hexo generate && rsync -az -vv --delete -e 'ssh -p 1224' public/ jimmy@google.com:/home/jimmy/org/blog
 
 # addons:
@@ -45,7 +45,7 @@ after_script:
   # 配置 git 替换为自己的信息
   - git config user.name 'JimmyG'
   - git config user.email jimmy.m.gong@gmail.com
-  - git add .
+  - git add -A .
   - git commit -m "Update docs"
   - git push --force --quiet "https://${GH_TOKEN}@${GH_REF}" master:master
 # E: Build LifeCycle
