@@ -1,12 +1,12 @@
 language: node_js
 node_js: stable
 
-addons:
-  apt:
-    sources:
-    - ubuntu-toolchain-r-test
-packages:
-  - emacs25
+# addons:
+#   apt:
+#     sources:
+#     - ubuntu-toolchain-r-test
+# packages:
+#   - emacs25
 
 # 配置环境
 # before_install:
@@ -32,7 +32,8 @@ install:
 # 部署的命令
 script:
   # - npm run deploy  # hexo clean && hexo g -d
-  hexo clean && hexo g -d
+  # - hexo clean && hexo g -d
+  - hexo g
   # - hexo generate && rsync -az -vv --delete -e 'ssh -p 1224' public/ jimmy@google.com:/home/jimmy/org/blog
 
 # addons:
@@ -42,8 +43,8 @@ after_script:
   - cd ./public
   - git init
   # 配置 git 替换为自己的信息
-  - git config --global user.name 'jimmy.m.gong'
-  - git config --global user.email jimmy.m.gong@gmail.com
+  - git config user.name 'jimmy.m.gong'
+  - git config user.email jimmy.m.gong@gmail.com
   - git add .
   - git commit -m "Update docs"
   - git push --force --quiet "https://${yssource_github_token}@${GH_REF}" master:master
