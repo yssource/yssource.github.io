@@ -31,7 +31,8 @@ install:
 
 # 部署的命令
 script:
-  - npm run deploy  # hexo clean && hexo g -d
+  # - npm run deploy  # hexo clean && hexo g -d
+  hexo clean && hexo g -d
   # - hexo generate && rsync -az -vv --delete -e 'ssh -p 1224' public/ brook@uedsky.com:/home/jimmy/org/blog
 
 # addons:
