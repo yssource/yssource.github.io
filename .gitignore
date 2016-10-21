@@ -1,6 +1,8 @@
-/hexo-org-cache
-/images
 db.json
-/node_modules
-debug.log
-/public
+.DS_Store
+Thumbs.db
+*.log
+public/
+node_modules/
+.deploy*/
+.git*/
