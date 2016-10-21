@@ -25,6 +25,7 @@ packages:
 # 安装依赖
 install:
   - npm install hexo-cli -g
+  - npm install https://github.com/CodeFalling/hexo-renderer-org#emacs --save
   - npm install
   # - git clone https://github.com/yssource/hexo-theme-next.git themes/next
 
