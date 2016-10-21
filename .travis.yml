@@ -1,6 +1,13 @@
 language: node_js
 node_js: stable
 
+addons:
+  apt:
+    sources:
+    - ubuntu-toolchain-r-test
+packages:
+  - emacs25
+
 # 配置环境
 # before_install:
 #   # 替换为刚才生成的解密信息
@@ -50,3 +57,4 @@ cache:
 env:
  global:
   - GH_REF: github.com/yssource/yssource.github.io.git
+  - EMACS: emacs25

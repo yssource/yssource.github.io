@@ -1,0 +1,20 @@
+#+TITLE: test
+#+AUTHOR: yssource
+#+EMAIL: yssource@163.com
+#+LANGUAGE: zh-Hans
+#+OPTIONS: H:3 num:nil toc:nil \n:nil ::t |:t ^:nil -:nil f:t *:t <:t
+#+URI: /blog/%y/%m/%d/
+#+DATE: 2016-10-21
+#+LAYOUT: post
+#+TAGS:
+#+CATEGORIES:
+#+DESCRIPTON:
+
+* Contents
+
+#+BEGIN_HTML
+<!--more-->
+#+END_HTML
+- when
+- why
+- how
