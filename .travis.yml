@@ -71,7 +71,7 @@ install:
   - npm install
   - ls -al ./node_modules/
   - nl ./node_modules/hexo-renderer-org/.travis.yml
-  - git clone https://github.com/yssource/hexo-theme-next.git themes/next
+  # - git clone https://github.com/yssource/hexo-theme-next.git themes/next
 
 # 部署的命令
 script:
@@ -81,6 +81,8 @@ script:
   # - hexo clean && hexo g
   # - emacs /home/travis/build/yssource/yssource.github.io/source/_posts/222.org --batch --kill -l /home/travis/build/yssource/yssource.github.io/node_modules/hexo-renderer-org/lib/tmp.el
   - emacs /home/travis/build/yssource/yssource.github.io/source/_posts/222.org --batch --kill -l /home/travis/build/yssource/yssource.github.io/tmp.el
+  - nl /home/travis/build/yssource/yssource.github.io/node_modules/hexo-renderer-org/lib/tmp.el
+  - nl /home/travis/build/yssource/yssource.github.io/node_modules/hexo-renderer-org/lib/renderer.js
   - hexo g
   # - hexo generate && rsync -az -vv --delete -e 'ssh -p 1224' public/ jimmy@google.com:/home/jimmy/org/blog
 
