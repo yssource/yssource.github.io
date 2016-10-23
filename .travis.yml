@@ -24,19 +24,22 @@ node_js: stable
 
 # 配置环境
 before_install:
-  # Configure $PATH: Executables are installed to $HOME/bin
-  - export PATH="$HOME/bin:$PATH"
-  # Download the makefile to emacs-travis.mk
-  - wget 'https://raw.githubusercontent.com/flycheck/emacs-travis/master/emacs-travis.mk'
-  # Install Emacs (according to $EMACS_VERSION) and Cask
-  - make -f emacs-travis.mk install_emacs
-  - make -f emacs-travis.mk install_cask
-  # Install Texinfo, if you need to build info manuals for your project
-  # - make -f emacs-travis.mk install_texinfo
-
-  - sudo apt-get install emacs texlive-latex-recommended texlive-latex-extra texlive-fonts-recommended
-  - sudo apt-get install chktex
+  # # Configure $PATH: Executables are installed to $HOME/bin
+  # - export PATH="$HOME/bin:$PATH"
+  # # Download the makefile to emacs-travis.mk
+  # - wget 'https://raw.githubusercontent.com/flycheck/emacs-travis/master/emacs-travis.mk'
+  # # Install Emacs (according to $EMACS_VERSION) and Cask
+  # - make -f emacs-travis.mk install_emacs
+  # - make -f emacs-travis.mk install_cask
+  # # Install Texinfo, if you need to build info manuals for your project
+  # # - make -f emacs-travis.mk install_texinfo
+  - emacs --version
+  - chmod a+x ./e25.sh
+  - bash -xv ./e25.sh
+  - cask install
   - which emacs
+  - emacs --version
+
   - ls -al /etc/emacs/site-start.d
   - ls -al /etc/emacs/
 
@@ -47,12 +50,6 @@ install:
   - npm install
   - ls -al ./node_modules/
   - nl ./node_modules/hexo-renderer-org/.travis.yml
-  - emacs --version
-  - chmod a+x ./e25.sh
-  # - bash -xv ./e25.sh
-  - cask install
-  - which emacs
-  - emacs --version
   # - git clone https://github.com/yssource/hexo-theme-next.git themes/next
 
 # 部署的命令
