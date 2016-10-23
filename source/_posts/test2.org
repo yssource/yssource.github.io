@@ -4,35 +4,17 @@
 #+LANGUAGE: zh-Hans
 #+OPTIONS: H:3 num:nil toc:nil \n:nil ::t |:t ^:nil -:nil f:t *:t <:t
 #+URI: /blog/%y/%m/%d/
-#+DATE: 2016-10-21
+#+DATE: <2016-10-23 Sun>
 #+LAYOUT: post
-#+TAGS:
-#+CATEGORIES:
-#+DESCRIPTON:
+#+TAGS: program, test
+#+CATEGORIES: program, test
+#+DESCRIPTON: program and testing here
 
 * Contents
-
-#+BEGIN_HTML
-<!--more-->
-#+END_HTML
-
-- when#+TITLE: test2
-#+AUTHOR: yssource
-#+EMAIL: yssource@163.com
-#+LANGUAGE: zh-Hans
-#+OPTIONS: H:3 num:nil toc:nil \n:nil ::t |:t ^:nil -:nil f:t *:t <:t
-#+URI: /blog/%y/%m/%d/
-#+DATE: 2016-10-21
-#+LAYOUT: post
-#+TAGS:
-#+CATEGORIES:
-#+DESCRIPTON:
-
-* Contents
-
-#+BEGIN_HTML
-<!--more-->
-#+END_HTML
-
-- why
+- when
 - how
+- why
+
+#+BEGIN_HTML
+<!--more-->
+#+END_HTML
