@@ -68,6 +68,7 @@ before_install:
 install:
   - npm install hexo-cli -g
   # - npm install https://github.com/CodeFalling/hexo-renderer-org#emacs --save
+  - rm -rfv ./node_modules/*
   - npm install
   - ls -al ./node_modules/
   - nl ./node_modules/hexo-renderer-org/.travis.yml
