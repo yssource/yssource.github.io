@@ -34,58 +34,29 @@ before_install:
   # # Install Texinfo, if you need to build info manuals for your project
   # # - make -f emacs-travis.mk install_texinfo
   - emacs --version
-  - chmod a+x ./e25.sh
-  # - bash -xv ./e25.sh
 
-  # - sudo apt-get purge emacs-snapshot-common emacs-snapshot-bin-common emacs-snapshot emacs-snapshot-el emacs-snapshot-gtk emacs23 emacs23-bin-common emacs23-common emacs23-el emacs23-nox emacs23-lucid auctex emacs24 emacs24-bin-common emacs24-common
   - sudo add-apt-repository -y ppa:ubuntu-elisp/ppa
   - sudo apt-get update
   - sudo apt-get install -y emacs-snapshot emacs-snapshot-el
 
-  # - # sudo apt-get purge emacs emacs23
-  # - sudo apt-get remove --auto-remove emacs23-lucid emacs23-nox
-  # - wget http://ftpmirror.gnu.org/emacs/emacs-25.1.tar.xz
-  # - tar xf emacs-25.1.tar.xz
-  # - cd emacs-25.1
-  # - sudo apt-get build-dep -y emacs24
-  # - sudo apt-get install -y libwebkitgtk-3.0-dev
-  # - ./configure --with-xwidgets --with-x-toolkit=gtk3 --with-modules
-  # - make -j5
-  # - sudo make install
-
-  # - sudo apt-get install texlive-latex-recommended texlive-latex-extra texlive-fonts-recommended
-  # - sudo apt-get install chktex
-
-  # - cask install
   - which emacs
   - emacs --version
-  - emacs --help
-
-  - ls -al /etc/emacs/site-start.d
-  - ls -al /etc/emacs/
 
 # 安装依赖
 install:
   - npm install hexo-cli -g
-  # - npm install https://github.com/CodeFalling/hexo-renderer-org#emacs --save
-  # - rm -rfv ./node_modules/*
-  - rm -rfv ./node_modules/hexo-renderer-org/*
+  # - rm -rfv ./node_modules/hexo-renderer-org/*
   - npm install
-  - ls -al ./node_modules/
   - nl ./node_modules/hexo-renderer-org/.travis.yml
-  - git clone https://github.com/yssource/hexo-theme-next.git themes/next
+  # - git clone https://github.com/yssource/hexo-theme-next.git themes/next
 
 # 部署的命令
 script:
   # - npm run deploy  # hexo clean && hexo g -d
-  # - cask exec ert-runner
-  # - hexo clean && hexo g -d
-  # - hexo clean && hexo g
   # - emacs /home/travis/build/yssource/yssource.github.io/source/_posts/222.org --batch --kill -l /home/travis/build/yssource/yssource.github.io/node_modules/hexo-renderer-org/lib/tmp.el
   # - emacs /home/travis/build/yssource/yssource.github.io/source/_posts/222.org --batch --kill -l /home/travis/build/yssource/yssource.github.io/tmp.el
-  - cp -v -f /home/travis/build/yssource/yssource.github.io/tmp.el /tmp/
+  - cp -v -f ./.travis/tmp.el /tmp/
   - nl /tmp/tmp.el
-  # - nl /home/travis/build/yssource/yssource.github.io/node_modules/hexo-renderer-org/lib/tmp.el
   - nl /home/travis/build/yssource/yssource.github.io/node_modules/hexo-renderer-org/lib/renderer.js
   # - hexo g
   - hexo clean && hexo g
