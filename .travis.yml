@@ -31,12 +31,12 @@ script:
 language: node_js
 node_js: stable
 
-addons:
-  apt:
-    sources:
-    - ubuntu-toolchain-r-test
-packages:
-  - emacs25
+# addons:
+#   apt:
+#     sources:
+#     - ubuntu-toolchain-r-test
+# packages:
+#   - emacs25
 
 # 配置环境
 # before_install:
