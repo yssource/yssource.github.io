@@ -1,14 +1,17 @@
+#+TITLE: php
+#+DATE: 2016-10-23
+#+TAGS:
+#+LAYOUT: post
+#+CATEGORIES:
+
 #+TITLE: Hello,orgmode
 #+DATE: <2015-11-15 Sun 17:00>
 #+TAGS: emacs, orgmode, hexo
 #+LAYOUT: post
 #+CATEGORIES: orgmode
-* Orgmode
-** Why org
-#+BEGIN_SRC js
-console.log('hello');
-#+END_SRC
-我编不下去了。。
+
+* Contents
+
 #+BEGIN_HTML
 <!--more-->
 #+END_HTML
