@@ -8,7 +8,7 @@
 #+BEGIN_SRC js
 console.log('hello');
 #+END_SRC
-我编不下去了。。
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 #+BEGIN_HTML
 <!--more-->
 #+END_HTML
