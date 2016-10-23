@@ -9,5 +9,5 @@ sudo apt-get install -y libwebkitgtk-3.0-dev
 make -j5
 sudo make install
 
-sudo apt-get install emacs texlive-latex-recommended texlive-latex-extra texlive-fonts-recommended
+sudo apt-get install texlive-latex-recommended texlive-latex-extra texlive-fonts-recommended
 sudo apt-get install chktex
