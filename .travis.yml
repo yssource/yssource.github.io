@@ -57,7 +57,9 @@ install:
   - npm install hexo-cli -g
   # - npm install https://github.com/CodeFalling/hexo-renderer-org#emacs --save
   - npm install
-  # - git clone https://github.com/yssource/hexo-theme-next.git themes/next
+  - npm install
+  - ls -al ./node_modules/
+  - git clone https://github.com/yssource/hexo-theme-next.git themes/next
 
 # 部署的命令
 script:
