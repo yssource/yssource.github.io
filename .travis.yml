@@ -48,7 +48,7 @@ install:
   # - rm -rfv ./node_modules/hexo-renderer-org/*
   - npm install
   - nl ./node_modules/hexo-renderer-org/.travis.yml
-  # - git clone https://github.com/yssource/hexo-theme-next.git themes/next
+  - git clone https://github.com/yssource/hexo-theme-next.git themes/next
 
 # 部署的命令
 script:
