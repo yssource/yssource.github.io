@@ -46,7 +46,7 @@ before_install:
 install:
   - npm install hexo-cli -g
   # - rm -rfv ./node_modules/hexo-renderer-org/*
-  - npm install
+  - npm install && npm update
   - nl ./node_modules/hexo-renderer-org/.travis.yml
   - git clone https://github.com/yssource/hexo-theme-next.git themes/next
 
