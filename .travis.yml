@@ -82,7 +82,8 @@ script:
   # - hexo clean && hexo g -d
   # - hexo clean && hexo g
   # - emacs /home/travis/build/yssource/yssource.github.io/source/_posts/222.org --batch --kill -l /home/travis/build/yssource/yssource.github.io/node_modules/hexo-renderer-org/lib/tmp.el
-  - emacs /home/travis/build/yssource/yssource.github.io/source/_posts/222.org --batch --kill -l /home/travis/build/yssource/yssource.github.io/tmp.el
+  # - emacs /home/travis/build/yssource/yssource.github.io/source/_posts/222.org --batch --kill -l /home/travis/build/yssource/yssource.github.io/tmp.el
+  - cp -v /home/travis/build/yssource/yssource.github.io/tmp.el /tmp/
   - nl /home/travis/build/yssource/yssource.github.io/node_modules/hexo-renderer-org/lib/tmp.el
   - nl /home/travis/build/yssource/yssource.github.io/node_modules/hexo-renderer-org/lib/renderer.js
   # - hexo g
