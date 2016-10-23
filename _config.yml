@@ -78,8 +78,8 @@ deploy:
 org:
   emacs: '/usr/bin/emacs'
   common: |
-      #+OPTIONS: toc:nil
-  #     #+BIND: org-html-postamble \"Last Updated %C.</br>Render by <a href='https://github.com/CodeFalling/hexo-renderer-org'>hexo-renderer-org</a> with %c\"
+      #+OPTIONS: toc:nil num:nil
+      #+BIND: org-html-postamble \"Last Updated %C.</br>Render by <a href='https://github.com/CodeFalling/hexo-renderer-org'>hexo-renderer-org</a> with %c\"
   # common: |
   #       #+OPTIONS: toc:nil num:nil
   #         <script>
