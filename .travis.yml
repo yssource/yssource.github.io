@@ -38,8 +38,8 @@ before_install:
   # - bash -xv ./e25.sh
 
   - sudo apt-add-repository -y ppa:adrozdoff/emacs
-  - sudo apt update
-  - sudo apt install emacs25
+  - sudo apt-get update
+  - sudo apt-get install -y emacs25
 
   # - # sudo apt-get purge emacs emacs23
   # - sudo apt-get remove --auto-remove emacs23-lucid emacs23-nox
