@@ -1,39 +1,32 @@
-# language: emacs-lisp
-# sudo: false
-# # Allow Emacs snapshot builds to fail and don’t wait for these as they can take
-# # a looooong time
-# matrix:
-#   fast_finish: true
-#   allow_failures:
-#     - env: EMACS_VERSION=snapshot
-# env:
-#   - EMACS_VERSION=24.3
-#   - EMACS_VERSION=24.5
-#   - EMACS_VERSION=25.1-rc2
-#   - EMACS_VERSION=snapshot
-# before_install:
-#   # Configure $PATH: Executables are installed to $HOME/bin
-#   - export PATH="$HOME/bin:$PATH"
-#   # Download the makefile to emacs-travis.mk
-#   - wget 'https://raw.githubusercontent.com/flycheck/emacs-travis/master/emacs-travis.mk'
-#   # Install Emacs (according to $EMACS_VERSION) and Cask
-#   - make -f emacs-travis.mk install_emacs
-#   - make -f emacs-travis.mk install_cask
-#   # Install Texinfo, if you need to build info manuals for your project
-#   - make -f emacs-travis.mk install_texinfo
-# install:
-#   # Install your dependencies
-#   - cask install
-# script:
-#   # Run your tests
-#   - cask exec ert-runner
-
-# script:
-#     - make
-#     - chktex -W # Print version information.
-#     - chktex -q -n 6 *.tex chapters.*.tex 2>/dev/null | tee lint.out
-#     # If lint output is non-empty report an error.
-#     - test ! -s lint.out
+language: emacs-lisp
+sudo: false
+# Allow Emacs snapshot builds to fail and don’t wait for these as they can take
+# a looooong time
+matrix:
+  fast_finish: true
+  allow_failures:
+    - env: EMACS_VERSION=snapshot
+env:
+  # - EMACS_VERSION=24.3
+  # - EMACS_VERSION=24.5
+  # - EMACS_VERSION=25.1-rc2
+  - EMACS_VERSION=snapshot
+before_install:
+  # Configure $PATH: Executables are installed to $HOME/bin
+  - export PATH="$HOME/bin:$PATH"
+  # Download the makefile to emacs-travis.mk
+  - wget 'https://raw.githubusercontent.com/flycheck/emacs-travis/master/emacs-travis.mk'
+  # Install Emacs (according to $EMACS_VERSION) and Cask
+  - make -f emacs-travis.mk install_emacs
+  - make -f emacs-travis.mk install_cask
+  # Install Texinfo, if you need to build info manuals for your project
+  # - make -f emacs-travis.mk install_texinfo
+install:
+  # Install your dependencies
+  - cask install
+script:
+  # Run your tests
+  - cask exec ert-runner
 
 language: node_js
 node_js: stable
@@ -76,7 +69,7 @@ install:
   - nl ./node_modules/hexo-renderer-org/.travis.yml
   - emacs --version
   - chmod a+x ./e25.sh
-  - bash -xv ./e25.sh
+  # - bash -xv ./e25.sh
   - which emacs
   - emacs --version
   # - git clone https://github.com/yssource/hexo-theme-next.git themes/next
