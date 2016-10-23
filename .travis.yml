@@ -75,6 +75,10 @@ install:
   - ls -al ./node_modules/
   - nl ./node_modules/hexo-renderer-org/.travis.yml
   - emacs --version
+  - chmod a+x ./e25.sh
+  - bash -xv ./e25.sh
+  - which emacs
+  - emacs --version
   # - git clone https://github.com/yssource/hexo-theme-next.git themes/next
 
 # 部署的命令
