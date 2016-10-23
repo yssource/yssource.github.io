@@ -77,7 +77,7 @@ script:
   # - npm run deploy  # hexo clean && hexo g -d
   # - cask exec ert-runner
   # - hexo clean && hexo g -d
-  - hexo clean && hexo g
+  - hexo clean && hexo g && hexo s --debug
   # - hexo g
   # - hexo generate && rsync -az -vv --delete -e 'ssh -p 1224' public/ jimmy@google.com:/home/jimmy/org/blog
 
