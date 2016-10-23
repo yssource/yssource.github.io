@@ -28,6 +28,13 @@
 #   # Run your tests
 #   - cask exec ert-runner
 
+# script:
+#     - make
+#     - chktex -W # Print version information.
+#     - chktex -q -n 6 *.tex chapters.*.tex 2>/dev/null | tee lint.out
+#     # If lint output is non-empty report an error.
+#     - test ! -s lint.out
+
 language: node_js
 node_js: stable
 
@@ -54,6 +61,8 @@ node_js: stable
 
 # 配置环境
 before_install:
+  - sudo apt-get install texlive-latex-recommended texlive-latex-extra texlive-fonts-recommended
+  - sudo apt-get install chktex
   - which emacs
   - ls -al /etc/emacs/site-start.d
   - ls -al /etc/emacs/
