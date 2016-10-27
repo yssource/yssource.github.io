@@ -1,0 +1,41 @@
+#+TITLE: cologne
+#+AUTHOR: yssource
+#+EMAIL: yssource@163.com
+#+LANGUAGE: zh-Hans
+#+OPTIONS: H:3 num:nil toc:nil \n:nil ::t |:t ^:nil -:nil f:t *:t <:t html-postamble:nil
+#+URI: /blog/%y/%m/%d/
+#+DATE: 2016-10-24
+#+LAYOUT: post
+#+TAGS: 欧洲, 德国, 科隆
+#+CATEGORIES: 欧洲, 德国, 科隆
+#+DESCRIPTON: 欧洲, 德国, 科隆
+
+* Contents
+
+#+ATTR_HTML: alt="Zoomed image."
+#+ATTR_HTML: width="300" style="border:2px solid black;"
+[[http://youimg1.c-ctrip.com/target/fd/tg/g5/M07/B9/D9/CggYsFbRnjqAY6BFAAXB7FXIyE0726.jpg]]
+
+#+ATTR_HTML: alt="Zoomed image."
+#+ATTR_HTML: width="300" style="border:2px solid black;"
+[[http://youimg1.c-ctrip.com/target/fd/tg/g5/M07/B9/D9/CggYsFbRnjqAY6BFAAXB7FXIyE0726.jpg]]
+
+#+ATTR_HTML: alt="Zoomed image."
+#+ATTR_HTML: width="300" style="border:2px solid black;"
+[[http://youimg1.c-ctrip.com/target/fd/tg/g5/M07/B9/D9/CggYsFbRnjqAY6BFAAXB7FXIyE0726.jpg]]
+
+#+ATTR_HTML: alt="Zoomed image."
+#+ATTR_HTML: width="300" style="border:2px solid black;"
+[[http://youimg1.c-ctrip.com/target/fd/tg/g5/M07/B9/D9/CggYsFbRnjqAY6BFAAXB7FXIyE0726.jpg]]
+
+#+ATTR_HTML: alt="Zoomed image."
+#+ATTR_HTML: width="300" style="border:2px solid black;"
+[[http://youimg1.c-ctrip.com/target/fd/tg/g5/M07/B9/D9/CggYsFbRnjqAY6BFAAXB7FXIyE0726.jpg]]
+
+#+attr_org: :width 400
+[[http://youimg1.c-ctrip.com/target/fd/tg/g5/M07/B9/D9/CggYsFbRnjqAY6BFAAXB7FXIyE0726.jpg]]
+
+
+#+BEGIN_HTML
+<!--more-->
+#+END_HTML

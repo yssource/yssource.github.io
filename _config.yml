@@ -80,7 +80,7 @@ org:
   # emacs_init: "~/.emacs.d-minimal/init.el"
   common: |
           #+OPTIONS: toc:nil num:nil
-          #+BIND: org-html-postamble \"Last Updated %C.</br>Render by <a href='https://github.com/CodeFalling/hexo-renderer-org'>hexo-renderer-org</a> with %c\"
+          #+BIND: org-html-postamble \"Last Updated %C.</br>Render by <a href='https://github.com/yssource/hexo-renderer-org'>hexo-renderer-org</a> with %c\"
   cachedir: './hexo-org-cache/'
 
 algolia:
@@ -90,18 +90,24 @@ algolia:
   indexName: 'agogm'
   chunkSize: 5000
 
-# Algolia Search
-algolia_search:
-  enable: true
-  hits:
-    per_page: 10
-  labels:
-    input_placeholder: Search for Posts
-    hits_empty: "We didn't find any results for the search: ${query}"
-    hits_stats: "${hits} results found in ${time} ms"
+# # Algolia Search
+# algolia_search:
+#   enable: true
+#   hits:
+#     per_page: 10
+#   labels:
+#     input_placeholder: Search for Posts
+#     hits_empty: "We didn't find any results for the search: ${query}"
+#     hits_stats: "${hits} results found in ${time} ms"
 
-search:
-  path: search.xml
-  field: post
-  format: html
-  limit: 10000
+# search:
+#   path: search.xml
+#   field: post
+#   format: html
+#   limit: 10000
+
+# marked:
+#     lazyAttr: data-src
+#     blankSrc: /img/loading.gif
+#     # for more options
+#     # please refer to https://github.com/hexojs/hexo-renderer-marked

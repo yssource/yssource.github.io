@@ -7,3 +7,5 @@ node_modules/
 .deploy*/
 .git*/
 /hexo-org-cache/
+.qshell//**/prj.txt
+/prj.txt

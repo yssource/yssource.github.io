@@ -1,0 +1,139 @@
+#+TITLE: Flash 动画 模块详解
+#+AUTHOR: Jimmy m Gong
+#+EMAIL: yssource@163.com
+#+LANGUAGE: zh-Hans
+#+OPTIONS: H:3 num:nil toc:nil \n:t ::t |:t ^:nil -:nil f:t *:t <:t html-postamble:nil
+#+URI: /blog/%y/%m/%d/
+#+DATE: 2016-10-27
+#+LAYOUT: post
+#+TAGS: Webpack, Angular.js, Ionic, PouchDB, Wechat, 微信, H5, Adobe Edge, Wordpress, Magento, 音乐贺卡
+#+CATEGORIES: mobile, APP
+#+DESCRIPTON: Webpack, Angular.js, Ionic, Wechat, H5, Adobe Edge, Wordpress, Magento, 音乐贺卡
+
+* [[https://yssource.github.io/0/2016/10/26/audi/#audi_menu_flash][Flash 动画 实现详解]]
+#+BEGIN_SRC sh -n -r
+  ├── ./flash
+  │   ├── ./flash/controllers
+  │   │   ├── ./flash/controllers/flash.controller.js
+  │   │   ├── ./flash/controllers/flash.controller.test.js
+  │   │   └── ./flash/controllers/index.js
+  │   ├── ./flash/index.js
+  │   ├── ./flash/services
+  │   │   ├── ./flash/services/flash.service.js
+  │   │   ├── ./flash/services/flash.service.test.js
+  │   │   └── ./flash/services/index.js
+  │   ├── ./flash/tests.webpack.js
+  │   └── ./flash/views
+  │       └── ./flash/views/home.html
+#+END_SRC
+#+BEGIN_HTML
+<!--more-->
+#+END_HTML
+  1. File: flash/index.js[fn:1]
+    #+NAME: flash/index.js
+    #+BEGIN_SRC javascript -n -r
+      'use strict';
+      var angular = require('angular');
+      var modulename = 'flash';
+
+      module.exports = function(namespace) {
+          var fullname = namespace + '.' + modulename;
+
+          var app = angular.module(fullname, ['ui.router', 'ionic'/*, 'ngResource'*/]);
+          require('./services')(app);
+          require('../utils/services')(app);
+          app.namespace = app.namespace || {};
+
+          var configRoutesDeps = ['$stateProvider', '$urlRouterProvider'];
+          var configRoutes = function($stateProvider, $urlRouterProvider) {
+              //$urlRouterProvider.otherwise('/');
+              $stateProvider.state('app.menu.flash', {
+                  url: '/flash/',
+                  views: {
+                      'menuContent@app.menu': {
+                          //template: require('./views/home.html'),
+                          templateProvider: ['$q', function ($q) {
+                              var deferred = $q.defer();
+                              require.ensure(['./views/home.html'], function () {
+                                  var template = require('./views/home.html');
+                                  deferred.resolve(template);
+                              });
+                              return deferred.promise;
+                          }],
+                          controller: fullname + '.' + 'flashCtrl'
+                      }
+                  },
+                  resolve: {
+                      loadFlashController: ['$q', '$ocLazyLoad', function ($q, $ocLazyLoad) {
+                          var deferred = $q.defer();
+                          require.ensure([], function () {
+                              require('./controllers/index.js')(app);
+                              require('./services/index.js')(app);
+                              $ocLazyLoad.load({
+                                  name: app.name
+                              });
+                              deferred.resolve(/*module.controller*/);
+                          });
+
+                          return deferred.promise;
+                      }]
+                  }
+
+              });
+          };
+          configRoutes.$inject = configRoutesDeps;
+          app.config(configRoutes);
+
+          return app;
+      };
+    #+END_SRC
+
+  2. File: flash/controller/flash.controller.js[fn:2]
+     #+BEGIN_SRC javascript -n -r
+       'use strict';
+       var controllername = 'flashCtrl';
+
+       module.exports = function (app) {
+           var fullname = app.name + '.' + controllername;
+           /*jshint validthis: true */
+
+           var deps = ['$scope', '$state', 'flashService'];
+
+           function controller($scope, $state, flashService) {
+               var vm = this;
+               vm.controllername = fullname;
+
+               var activate = function () {
+                   flashService.createDB().then(function () {
+                       flashService.initDB();
+                       // Get all flash records from the database.
+                       flashService.getAllFlashs().then(function (flashs) {
+                           $scope.flashs = flashs;
+                       });
+                   });
+               };
+               activate();
+
+               $scope.setupflash = function (cat) {
+                   window.localStorage.fid = cat.id;
+                   $state.go('app.menu.home', {
+                       fid: window.localStorage.fid,
+                       mid: window.localStorage.mid,
+                       pid: window.localStorage.pid,
+                       tid: window.localStorage.tid,
+                       did: window.localStorage.did,
+                       cid: window.localStorage.cid
+                   });
+               };
+           }
+
+           controller.$inject = deps;
+           app.controller(fullname, controller);
+       };
+     #+END_SRC
+
+* Footnotes
+
+[fn:2] flash/controoler/flash.controller.js
+
+[fn:1] flash/index.js
