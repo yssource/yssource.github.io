@@ -329,7 +329,7 @@
      + 每天美文
      + 2016 新年相册
      + 音乐
-     + <<audi_menu_flash>>[[https://yssource.github.io/0/2016/10/27/audi_flash/][Flash 动画]]
+     + <<audi_menu_flash>>[[https://yssource.github.io/2016/10/27/audi_flash/][Flash 动画]]
        包含十几种动态的 Flash 动画 模板, 如飘落的秋叶, 满天飞的人民币, 等等
        | [[http://ofjaqrxxj.bkt.clouddn.com/audi/643250341.jpg][http://ofjaqrxxj.bkt.clouddn.com/audi/643250341.jpg]] | [[http://ofjaqrxxj.bkt.clouddn.com/audi/675269086.jpg][http://ofjaqrxxj.bkt.clouddn.com/audi/675269086.jpg]] | [[http://ofjaqrxxj.bkt.clouddn.com/audi/929630659.jpg][http://ofjaqrxxj.bkt.clouddn.com/audi/929630659.jpg]] | [[http://ofjaqrxxj.bkt.clouddn.com/audi/962464746.jpg][http://ofjaqrxxj.bkt.clouddn.com/audi/962464746.jpg]] |
      + 海外代购
