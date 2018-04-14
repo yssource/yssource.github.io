@@ -16,7 +16,7 @@
 | [[http://audi.agogm.com/][http://ofjaqrxxj.bkt.clouddn.com/audi/1432928487.jpg]] | [[http://audi.agogm.com/][http://ofjaqrxxj.bkt.clouddn.com/audi/711592415.jpg]] |
 * 为什么会有这个项目
 - 为了爱情
-  2015年末, Jimmy 正在追求心仪的女神, 这个应用为她而作. 现在她已经是我的妻子.
+  2015年末, Jimmy 正在追求心仪的女神, 这个应用为她而作.
 - 微信营销
   市场上微信营销太过于简单粗暴, 毫无美感.
   然而这个借鉴市场上流行的音乐贺卡, 企业场景应用 APP 模式, 整合微信营销
@@ -319,7 +319,7 @@
   └── ./wordpressDetail/views
   └── ./wordpressDetail/views/home.html
 #+END_SRC
-* 实现了那些功能
+* 实现了哪些功能
 ** Home
   1. Wechat(微信) 认证, 关联微信公众号
   2. Menu

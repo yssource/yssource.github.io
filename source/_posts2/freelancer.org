@@ -1,0 +1,76 @@
+#+TITLE: freelancer
+#+AUTHOR: Jimmy m Gong
+#+EMAIL: yssource@163.com
+#+LANGUAGE: zh-Hans
+#+OPTIONS: H:3 num:nil toc:nil \n:t ::t |:t ^:nil -:nil f:t *:t <:t html-postamble:nil
+#+URI: /blog/%y/%m/%d/
+#+DATE: 2016-11-02
+#+LAYOUT: post
+#+TAGS:
+#+CATEGORIES:
+#+DESCRIPTON:
+
+* Contents
+
+We are web studio, that making high quality websites for small business and we are looking selling agent from US (ONLY FROM US).
+
+What we need from you:
+
+1 - find local business owners that needs website or website redesign (not online shops).
+
+2 - manage projects (speak with clients and tell us what they want, than show them our work and get money from them).
+
+3 - check spelling in our designs (because english is not our native language)
+
+No development skills need. But we need active, responsible and clever person. Also all websites will be developed with Wordpress and visual composer plugin. You must understand what you are speaking about with client.
+
+All materials for this job will send to appreciated Freelancer.
+
+Payment will be discussed in chat with appreciated Freelancer.
+
+Examples of our websites is in our portfolio http://cherry-garden.com/en/
+
+#+BEGIN_HTML
+<!--more-->
+#+END_HTML
+
+
+Hi, I am a Magento senior developer with proven experience. I have been developing lots of website base on Magento CE, since v1.4.x to v1.9.x. And I have been developing themes and extension in order that magento would be more friendly to Chinese users.
+I worked with my team members, developing some payment gateway extensions and published them on github.
+
+Hi, I am a Magento senior developer with proved experience. I have been developing lots of website base on Magento CE, since v1.4.x to v1.9.x, and 2.1x. And I have been developing themes and extension in order that magento would be more friendly to Chinese users.
+Here is my recently work, http://de.agogm.com/
+
+Basically, all my website are deployed on LAMP, For a good performance, I like to configure them like this: varnished(:80) > nginx(:8080) > php-fpm(:9000) + redis
+
+Hey, I would like to complete your project. Here is my recently work, http://de.agogm.com/
+Hey, I would like to complete your project. Here is my recently work, http://de.agogm.com/ . Please take a look.
+
+I don't think it is a good way to hard code the core of Magento.
+From my past experience on M1, I used to write a extension with modman tool.
+It's depends on which module to override, firstly rewrite in config.xml, and then extend the Class in respectively.
+For instance,
+#+BEGIN_SRC xml
+  <config>
+      <global>
+          <blocks>
+              <tag>
+                  <rewrite>
+                      <product_list>MyCompany_Tag_Block_Product_List</product_list>
+                  </rewrite>
+              </tag>
+          </blocks>
+      </global>
+  </config>
+#+END_SRC
+
+#+BEGIN_SRC php
+  class MyCompany_Tag_Block_Product_List extends Mage_Tag_Block_Product_List
+  {
+      // some code
+  }
+#+END_SRC
+
+
+You're going to implement with Events/Observers, aren't you?
+I'm sorry, actually I implied this approach previously when I said by the Rewrite/Extends way.

@@ -1,0 +1,693 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh-Hans" xml:lang="zh-Hans">
+<head>
+<!-- 2016-12-10 Sat 17:02 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>test</title>
+<meta name="generator" content="Org mode" />
+<meta name="author" content="Jimmy m Gong" />
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 3px #eee;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: visible;
+    padding-top: 1.2em;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: -10px;
+    right: 10px;
+    padding: 3px;
+    border: 1px solid black;
+  }
+  pre.src:hover:before { display: inline;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { width: 90%; }
+  /*]]>*/-->
+</style>
+<link rel="stylesheet" type="text/css" href="../styles/readtheorg/css/htmlize.css"/>
+<link rel="stylesheet" type="text/css" href="../styles/readtheorg/css/readtheorg.css"/>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="../styles/lib/js/jquery.stickytableheaders.min.js"></script>
+<script type="text/javascript" src="../styles/readtheorg/js/readtheorg.js"></script>
+<script type="text/javascript">
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012-2013 Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+</head>
+<body>
+<div id="content">
+<h1 class="title">test</h1>
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#org0e7e3d3">团购协议</a>
+<ul>
+<li>
+<ul>
+<li><a href="#org7685780">价格</a></li>
+<li><a href="#orgbb2a752">责任及义务</a></li>
+<li><a href="#org12e19c9">付款方式及流程</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#orgee41da7">Work&#xa0;&#xa0;&#xa0;<span class="tag"><span class="work">work</span></span></a>
+<ul>
+<li><a href="#org683e702">Marketing</a>
+<ul>
+<li><a href="#orgbf06ced">Background and research</a></li>
+<li><a href="#orgf1d3863">PR firm</a></li>
+<li><a href="#org7bcba3d">Advertising campaign</a></li>
+<li><a href="#org73d49a4">Plan conference</a></li>
+</ul>
+</li>
+<li><a href="#orge0aaa5c">Operations</a>
+<ul>
+<li><a href="#orgc4cc0f9"><span class="todo TODO">TODO</span> Update database to latest version</a></li>
+<li><a href="#org8d7ea53"><span class="todo TODO">TODO</span> Update Website</a></li>
+</ul>
+</li>
+<li><a href="#orgcdd58b0">Travel</a>
+<ul>
+<li><a href="#orgf1d47b0">Boston</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#org98b8590">Personal&#xa0;&#xa0;&#xa0;<span class="tag"><span class="home">home</span></span></a>
+<ul>
+<li><a href="#org984c4db">Writing</a></li>
+<li><a href="#orgd4b73db">Reading</a>
+<ul>
+<li><a href="#org7b4fe80"><span class="done DONE">DONE</span> Read "Getting Things Done"</a></li>
+</ul>
+</li>
+<li><a href="#org5be18db">Health</a>
+<ul>
+<li><a href="#org95bc5a3"><span class="todo TODO">TODO</span> Make dentist appointment</a></li>
+<li><a href="#orgcf9c387"><span class="todo TODO">TODO</span> Go to the gym</a></li>
+<li><a href="#org2b27acb"><span class="todo TODO">TODO</span> Do jogging</a></li>
+</ul>
+</li>
+<li><a href="#org3dacbc9">Finance</a>
+<ul>
+<li><a href="#orgf762977"><span class="todo TODO">TODO</span> Pay electricity bill&#xa0;&#xa0;&#xa0;<span class="tag"><span class="FLAGGED">FLAGGED</span></span></a></li>
+<li><a href="#org350b242"><span class="todo TODO">TODO</span> Renew newspaper subscription</a></li>
+<li><a href="#orge8e50fa"><span class="todo TODO">TODO</span> Cancel insurance</a></li>
+</ul>
+</li>
+<li><a href="#org68308f0">Chores</a>
+<ul>
+<li><a href="#org4101977"><span class="todo TODO">TODO</span> Buy milk</a></li>
+<li><a href="#org9131788"><span class="todo TODO">TODO</span> Buy dog food</a></li>
+<li><a href="#orgf03bd25">WAIT Mail package to Susan</a></li>
+<li><a href="#orgfe34d3b"><span class="todo TODO">TODO</span> Buy groceries</a></li>
+<li><a href="#orgbb49a48"><span class="todo TODO">TODO</span> Mow the lawn</a></li>
+<li><a href="#orgd8b6da2"><span class="todo TODO">TODO</span> Get a haircut</a></li>
+<li><a href="#org3c3e38c"><span class="todo TODO">TODO</span> Buy anniversary present</a></li>
+<li><a href="#orgcdea8f4"><span class="todo TODO">TODO</span> Take out trash</a></li>
+<li><a href="#org5bb4da3"><span class="todo TODO">TODO</span> Get the car fixed</a></li>
+</ul>
+</li>
+<li><a href="#org78a1119">Recreation</a>
+<ul>
+<li><a href="#org0d2f59b"><span class="todo TODO">TODO</span> Go to concert</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div class="HTML">
+<p>
+&lt;div class="right"&gt;
+  &lt;a href="<a href="https://github.com/fniessen/org-html-themes/blob/master/demo/example.org">https://github.com/fniessen/org-html-themes/blob/master/demo/example.org</a>" class="fa fa-github"&gt; Edit on GitHub&lt;/a&gt;
+&lt;/div&gt;
+</p>
+
+</div>
+
+<hr  />
+
+<div id="org0e7e3d3" class="outline-2">
+<h2 id="org0e7e3d3">团购协议</h2>
+<div class="outline-text-2" id="text-org0e7e3d3">
+<div class="org-center">
+<p>
+:100:
+Everything should be made as simple as possible, <br  />
+2 Everything should be made as simple as possible,
+but not any simpler
+</p>
+</div>
+
+<p class="verse">
+Great clouds overhead<br  />
+Tiny black birds rise and fall<br  />
+Snow covers Emacs<br  />
+:100:<br  />
+:chicken:<br  />
+&#xa0;&#xa0;&#xa0;&#xa0;-- AlexSchroeder<br  />
+</p>
+
+<blockquote>
+<p>
+Everything should be made as simple as possible,
+but not any simpler -- Albert Einstein
+</p>
+</blockquote>
+
+
+<div class="left">
+<p>
+This text is <br  />
+aligned to the left!
+</p>
+
+</div>
+
+<div class="org-center">
+<p>
+This text is <br  />
+centered!
+</p>
+</div>
+
+<div class="right">
+<p>
+This text is <br  />
+aligned to the right!
+</p>
+
+</div>
+
+<p>
+甲方：
+</p>
+
+<p>
+乙方：
+</p>
+
+
+<p>
+春节将至，经双方友好协商，现就团购事宜达成如下协议:
+</p>
+</div>
+
+<div id="org7685780" class="outline-4">
+<h4 id="org7685780">价格</h4>
+<div class="outline-text-4" id="text-org7685780">
+<ol class="org-ol">
+<li>团购商品信息及价格如下：商品名称：,商品数量：,原价：元/件，团购价：元/件. 总合计：（大写）, (小写)</li>
+</ol>
+<div class="HTML">
+<p>
+&lt;!--more--&gt;
+</p>
+
+</div>
+</div>
+</div>
+
+<div id="orgbb2a752" class="outline-4">
+<h4 id="orgbb2a752">责任及义务</h4>
+<div class="outline-text-4" id="text-orgbb2a752">
+<ol class="org-ol">
+<li>乙方保证本次团购享受和零售产品同样的质量保证和售后服务。</li>
+<li>甲方必须货到付款。</li>
+</ol>
+</div>
+</div>
+
+<div id="org12e19c9" class="outline-4">
+<h4 id="org12e19c9">付款方式及流程</h4>
+<div class="outline-text-4" id="text-org12e19c9">
+<ol class="org-ol">
+<li>甲方预付定金，春节由乙方将货物送至甲方目的地。</li>
+<li>乙方凭发票到甲方结算货款。</li>
+<li>本合同有效期：     年  月  日 至     年  月  日</li>
+</ol>
+
+
+<p>
+甲方（盖章）一方（盖章）代表：代表：日期：      年  月  日 日期：     年  月  日
+</p>
+</div>
+
+<ul class="org-ul"><li><a id="org26f5cf1"></a>Lord of the Rings<br  /><div class="outline-text-5" id="text-org26f5cf1">
+<p>
+My favorite scenes are (in this order)
+</p>
+<ol class="org-ol">
+<li>The attack of the Rohirrim</li>
+<li>Eowyn's fight with the witch king
+<ul class="org-ul">
+<li>this was already my favorite scene in the book</li>
+<li>I really like Miranda Otto.</li>
+</ul></li>
+<li><p>
+Peter Jackson being shot by Legolas
+</p>
+<ul class="org-ul">
+<li>on DVD only</li>
+</ul>
+<p>
+He makes a really funny face when it happens.
+</p></li>
+</ol>
+<p>
+ORG-LIST-END-MARKER
+   But in the end, no individual scenes matter but the film as a whole.
+   Important actors in this film are:
+</p>
+<dl class="org-dl">
+<dt>Elijah Wood</dt><dd>He plays Frodo</dd>
+<dt>Sean Austin</dt><dd>He plays Sam, Frodo's friend.  I still remember
+him very well from his role as Mikey Walsh in The Goonies.
+               ORG-LIST-END-MARKER</dd>
+</dl>
+
+
+
+<div class="HTML">
+<p>
+&lt;!--more--&gt;
+</p>
+
+</div>
+</div></li></ul>
+</div>
+</div>
+
+
+<div id="orgee41da7" class="outline-2">
+<h2 id="orgee41da7">Work&#xa0;&#xa0;&#xa0;<span class="tag"><span class="work">work</span></span></h2>
+<div class="outline-text-2" id="text-orgee41da7">
+<p>
+Only work tasks in this list.
+</p>
+</div>
+
+<div id="org683e702" class="outline-3">
+<h3 id="org683e702">Marketing</h3>
+<div class="outline-text-3" id="text-org683e702">
+<p>
+Project "Corporate Marketing".
+</p>
+</div>
+
+<div id="orgbf06ced" class="outline-4">
+<h4 id="orgbf06ced">Background and research</h4>
+<div class="outline-text-4" id="text-orgbf06ced">
+</div><ul class="org-ul"><li><a id="org6d97b64"></a><span class="todo TODO">TODO</span> Who are the competitors?<br  /></li>
+
+<li><a id="org7312d1c"></a><span class="todo TODO">TODO</span> What are our product's advantages?<br  /></li>
+
+<li><a id="org4752f13"></a><span class="todo TODO">TODO</span> Target market<br  /></li>
+
+<li><a id="orgb6c0d3e"></a><span class="todo TODO">TODO</span> Elevator pitch<br  /></li></ul>
+</div>
+
+<div id="orgf1d3863" class="outline-4">
+<h4 id="orgf1d3863">PR firm</h4>
+<div class="outline-text-4" id="text-orgf1d3863">
+</div><ul class="org-ul"><li><a id="org7aa056b"></a><span class="todo TODO">TODO</span> Call Laura about PR firm&#xa0;&#xa0;&#xa0;<span class="tag"><span class="phone">phone</span></span><br  /></li>
+
+<li><a id="org4887f05"></a><span class="todo TODO">TODO</span> Interview PR firm candidates<br  /><div class="outline-text-5" id="text-org4887f05">
+</div></li></ul>
+</div>
+
+<div id="org7bcba3d" class="outline-4">
+<h4 id="org7bcba3d">Advertising campaign</h4>
+<div class="outline-text-4" id="text-org7bcba3d">
+</div><ul class="org-ul"><li><a id="org79452ef"></a><span class="todo TODO">TODO</span> Call Joe<br  /><div class="outline-text-5" id="text-org79452ef">
+</div></li></ul>
+</div>
+
+<div id="org73d49a4" class="outline-4">
+<h4 id="org73d49a4">Plan conference</h4>
+<div class="outline-text-4" id="text-org73d49a4">
+<p>
+Calendar events/invitations.
+</p>
+</div>
+
+<ul class="org-ul"><li><a id="org6e6342b"></a><span class="todo TODO">TODO</span> Recruit volunteers<br  /><div class="outline-text-5" id="text-org6e6342b">
+</div></li>
+
+<li><a id="orgd50e013"></a><span class="todo TODO">TODO</span> Make sure responses are coming back<br  /></li></ul>
+</div>
+</div>
+
+<div id="orge0aaa5c" class="outline-3">
+<h3 id="orge0aaa5c">Operations</h3>
+<div class="outline-text-3" id="text-orge0aaa5c">
+</div><div id="orgc4cc0f9" class="outline-4">
+<h4 id="orgc4cc0f9"><span class="todo TODO">TODO</span> Update database to latest version</h4>
+<div class="outline-text-4" id="text-orgc4cc0f9">
+</div>
+</div>
+
+<div id="org8d7ea53" class="outline-4">
+<h4 id="org8d7ea53"><span class="todo TODO">TODO</span> Update Website</h4>
+<div class="outline-text-4" id="text-org8d7ea53">
+<p>
+Update blog.
+</p>
+</div>
+</div>
+</div>
+
+<div id="orgcdd58b0" class="outline-3">
+<h3 id="orgcdd58b0">Travel</h3>
+<div class="outline-text-3" id="text-orgcdd58b0">
+</div><div id="orgf1d47b0" class="outline-4">
+<h4 id="orgf1d47b0">Boston</h4>
+<div class="outline-text-4" id="text-orgf1d47b0">
+</div><ul class="org-ul"><li><a id="orgb9be455"></a><span class="todo TODO">TODO</span> Find a flight<br  /></li>
+
+<li><a id="orge026f3a"></a><span class="todo TODO">TODO</span> Book hotel room<br  /></li>
+
+<li><a id="org37c81da"></a><span class="todo TODO">TODO</span> Schedule meetings<br  /></li>
+
+<li><a id="orgd91e0ae"></a><span class="todo TODO">TODO</span> Submit expense report<br  /><div class="outline-text-5" id="text-orgd91e0ae">
+<hr  />
+</div></li></ul>
+</div>
+</div>
+</div>
+
+<div id="org98b8590" class="outline-2">
+<h2 id="org98b8590">Personal&#xa0;&#xa0;&#xa0;<span class="tag"><span class="home">home</span></span></h2>
+<div class="outline-text-2" id="text-org98b8590">
+</div>
+
+<div id="org984c4db" class="outline-3">
+<h3 id="org984c4db">Writing</h3>
+</div>
+<div id="orgd4b73db" class="outline-3">
+<h3 id="orgd4b73db">Reading</h3>
+<div class="outline-text-3" id="text-orgd4b73db">
+</div><div id="org7b4fe80" class="outline-4">
+<h4 id="org7b4fe80"><span class="done DONE">DONE</span> Read "Getting Things Done"</h4>
+<div class="outline-text-4" id="text-org7b4fe80">
+</div>
+</div>
+</div>
+
+<div id="org5be18db" class="outline-3">
+<h3 id="org5be18db">Health</h3>
+<div class="outline-text-3" id="text-org5be18db">
+</div><div id="org95bc5a3" class="outline-4">
+<h4 id="org95bc5a3"><span class="todo TODO">TODO</span> Make dentist appointment</h4>
+<div class="outline-text-4" id="text-org95bc5a3">
+</div>
+</div>
+
+<div id="orgcf9c387" class="outline-4">
+<h4 id="orgcf9c387"><span class="todo TODO">TODO</span> Go to the gym</h4>
+<div class="outline-text-4" id="text-orgcf9c387">
+<p>
+It should be as natural to some as showering or eating.
+</p>
+</div>
+</div>
+
+<div id="org2b27acb" class="outline-4">
+<h4 id="org2b27acb"><span class="todo TODO">TODO</span> Do jogging</h4>
+<div class="outline-text-4" id="text-org2b27acb">
+<p>
+Marathon = 42.195 kilometres.
+</p>
+</div>
+</div>
+</div>
+
+<div id="org3dacbc9" class="outline-3">
+<h3 id="org3dacbc9">Finance</h3>
+<div class="outline-text-3" id="text-org3dacbc9">
+</div><div id="orgf762977" class="outline-4">
+<h4 id="orgf762977"><span class="todo TODO">TODO</span> Pay electricity bill&#xa0;&#xa0;&#xa0;<span class="tag"><span class="FLAGGED">FLAGGED</span></span></h4>
+</div>
+
+<div id="org350b242" class="outline-4">
+<h4 id="org350b242"><span class="todo TODO">TODO</span> Renew newspaper subscription</h4>
+</div>
+
+<div id="orge8e50fa" class="outline-4">
+<h4 id="orge8e50fa"><span class="todo TODO">TODO</span> Cancel insurance</h4>
+</div>
+</div>
+
+<div id="org68308f0" class="outline-3">
+<h3 id="org68308f0">Chores</h3>
+<div class="outline-text-3" id="text-org68308f0">
+</div><div id="org4101977" class="outline-4">
+<h4 id="org4101977"><span class="todo TODO">TODO</span> Buy milk</h4>
+</div>
+
+<div id="org9131788" class="outline-4">
+<h4 id="org9131788"><span class="todo TODO">TODO</span> Buy dog food</h4>
+</div>
+
+<div id="orgf03bd25" class="outline-4">
+<h4 id="orgf03bd25">WAIT Mail package to Susan</h4>
+</div>
+
+<div id="orgfe34d3b" class="outline-4">
+<h4 id="orgfe34d3b"><span class="todo TODO">TODO</span> Buy groceries</h4>
+</div>
+
+<div id="orgbb49a48" class="outline-4">
+<h4 id="orgbb49a48"><span class="todo TODO">TODO</span> Mow the lawn</h4>
+</div>
+
+<div id="orgd8b6da2" class="outline-4">
+<h4 id="orgd8b6da2"><span class="todo TODO">TODO</span> Get a haircut</h4>
+</div>
+
+<div id="org3c3e38c" class="outline-4">
+<h4 id="org3c3e38c"><span class="todo TODO">TODO</span> Buy anniversary present</h4>
+</div>
+
+<div id="orgcdea8f4" class="outline-4">
+<h4 id="orgcdea8f4"><span class="todo TODO">TODO</span> Take out trash</h4>
+</div>
+
+<div id="org5bb4da3" class="outline-4">
+<h4 id="org5bb4da3"><span class="todo TODO">TODO</span> Get the car fixed</h4>
+</div>
+</div>
+
+<div id="org78a1119" class="outline-3">
+<h3 id="org78a1119">Recreation</h3>
+<div class="outline-text-3" id="text-org78a1119">
+</div><div id="org0d2f59b" class="outline-4">
+<h4 id="org0d2f59b"><span class="todo TODO">TODO</span> Go to concert</h4>
+</div>
+</div>
+</div>
+</div>
+</body>
+</html>

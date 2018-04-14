@@ -1,0 +1,419 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh-Hans" xml:lang="zh-Hans">
+<head>
+<!-- 2016-12-15 Thu 01:17 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>test2</title>
+<meta name="generator" content="Org mode" />
+<meta name="author" content="Jimmy m Gong" />
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 3px #eee;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: visible;
+    padding-top: 1.2em;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: -10px;
+    right: 10px;
+    padding: 3px;
+    border: 1px solid black;
+  }
+  pre.src:hover:before { display: inline;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { width: 90%; }
+  /*]]>*/-->
+</style>
+<link rel="stylesheet" type="text/css" href="../styles/readtheorg/css/htmlize.css"/>
+<link rel="stylesheet" type="text/css" href="../styles/readtheorg/css/readtheorg.css"/>
+<link rel="stylesheet" type="text/css" href="../styles/readtheorg/css/readtheorg.css"/>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="../styles/lib/js/jquery.stickytableheaders.min.js"></script>
+<script type="text/javascript" src="../styles/readtheorg/js/readtheorg.js"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<script type="text/javascript">
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012-2013 Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+</head>
+<body>
+<div id="content">
+<h1 class="title">test2</h1>
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#orgc0b2fdf">org-mode structure</a>
+<ul>
+<li><a href="#org183023e">A subheading</a></li>
+<li><a href="#org63bcb05">navigation</a></li>
+<li><a href="#orgf0f5000">lists</a>
+<ul>
+<li><a href="#org2d18fd7">bullet lists</a></li>
+<li><a href="#org0be11a2">numbered lists</a></li>
+<li><a href="#org483774c">checklists <code>[/]</code></a></li>
+<li><a href="#org1c687c4">definition lists</a></li>
+<li><a href="#orgfc57556">Test me</a></li>
+</ul>
+</li>
+<li><a href="#org09de56d">Lord of the Rings</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+
+<div id="orgc0b2fdf" class="outline-2">
+<h2 id="orgc0b2fdf">org-mode structure</h2>
+<div class="outline-text-2" id="text-orgc0b2fdf">
+<p>
+Text in org is structured by headings, denoted by lines starting with
+one or more * so we are currently in a section!
+</p>
+</div>
+
+<div id="org183023e" class="outline-3">
+<h3 id="org183023e">A subheading</h3>
+<div class="outline-text-3" id="text-org183023e">
+<p>
+Starts with an extra * and so on
+</p>
+</div>
+</div>
+
+<div id="org63bcb05" class="outline-3">
+<h3 id="org63bcb05">navigation</h3>
+<div class="outline-text-3" id="text-org63bcb05">
+<p>
+Headings can be expanded or collapsed by moving to the (sub)heading
+and pressing TAB. S-TAB cycles all headings. You can jump to next and
+previous headings with C-c C-n and C-c C-p respectively.
+</p>
+
+<p>
+You can move headings up and down to reorder them with the arrow keys,
+using M-up or M-down. You can change the level of headings with M-left
+and M-right (and use M-S-left and M-S-right to also change the levels
+of and subheadings).
+</p>
+</div>
+</div>
+
+<div id="orgf0f5000" class="outline-3">
+<h3 id="orgf0f5000">lists</h3>
+<div class="outline-text-3" id="text-orgf0f5000">
+</div><div id="org2d18fd7" class="outline-4">
+<h4 id="org2d18fd7">bullet lists</h4>
+<div class="outline-text-4" id="text-org2d18fd7">
+<ul class="org-ul">
+<li>bullet lists can be created like this (start a line with one or
+more space and a -</li>
+<li>pressing M-RET gives you a new bullet</li>
+<li>we might also like nested bullets
+<ul class="org-ul">
+<li>like this one (I pressed M-RET TAB to indent it)</li>
+<li>and another (M-RET now indents to the new level)</li>
+</ul></li>
+<li>the nice thing is that for long lines of text, emacs wraps them
+so that they line up with the bullet</li>
+<li>you can also reorder list items and change indentation using
+M-up or M-down just like with section headings</li>
+<li>you can change bullet style using S-left and S-right</li>
+</ul>
+</div>
+</div>
+
+<div id="org0be11a2" class="outline-4">
+<h4 id="org0be11a2">numbered lists</h4>
+<div class="outline-text-4" id="text-org0be11a2">
+<ol class="org-ol">
+<li>numbered lists are also possible</li>
+<li>M-RET gives me a new number</li>
+</ol>
+</div>
+</div>
+
+<div id="org483774c" class="outline-4">
+<h4 id="org483774c">checklists <code>[/]</code></h4>
+<div class="outline-text-4" id="text-org483774c">
+<ul class="org-ul">
+<li class="off"><code>[&#xa0;]</code> we can even have check lists</li>
+<li class="off"><code>[&#xa0;]</code> M-S-RET gives a new item with a check box</li>
+<li class="off"><code>[&#xa0;]</code> C-c C-c check/unchecks a box</li>
+<li class="off"><code>[&#xa0;]</code> you can have sub items
+<ul class="org-ul">
+<li class="off"><code>[&#xa0;]</code> like this</li>
+<li class="off"><code>[&#xa0;]</code> that can be checked off individually</li>
+</ul></li>
+<li class="off"><code>[&#xa0;]</code> and you can track the number of items by adding <code>[/]</code> to the end
+of a line above a checklist - this updates when you check items off</li>
+</ul>
+</div>
+</div>
+
+<div id="org1c687c4" class="outline-4">
+<h4 id="org1c687c4">definition lists</h4>
+<div class="outline-text-4" id="text-org1c687c4">
+<dl class="org-dl">
+<dt>definition lists</dt><dd>these are useful sometimes</dd>
+<dt>item 2</dt><dd>M-RET again gives another item, and long lines wrap in a
+tidy way underneath the definition</dd>
+</dl>
+</div>
+</div>
+
+<div id="orgfc57556" class="outline-4">
+<h4 id="orgfc57556">Test me</h4>
+<div class="outline-text-4" id="text-orgfc57556">
+<p>
+write something here :: xxxxxxxxxx
+h999write something here 222 <br  />
+3334write something here :: xxxxxxxxxx
+write something here 111222
+</p>
+
+<p>
+your are right
+</p>
+</div>
+</div>
+</div>
+
+<div id="org09de56d" class="outline-3">
+<h3 id="org09de56d">Lord of the Rings</h3>
+<div class="outline-text-3" id="text-org09de56d">
+<p>
+My favorite scenes are (in this order)
+</p>
+<ol class="org-ol">
+<li>The attack of the Rohirrim</li>
+<li>Eowyn's fight with the witch king
+<ul class="org-ul">
+<li>this was already my favorite scene in the book</li>
+<li>I really like Miranda Otto.</li>
+</ul></li>
+<li><p>
+Peter Jackson being shot by Legolas
+</p>
+<ul class="org-ul">
+<li>on DVD only</li>
+</ul>
+<p>
+He makes a really funny face when it happens.
+</p></li>
+</ol>
+<p>
+But in the end, no individual scenes matter but the film as a whole.
+Important actors in this film are:
+</p>
+<dl class="org-dl">
+<dt>Elijah Wood</dt><dd>He plays Frodo</dd>
+<dt>Sean Austin</dt><dd>He plays Sam, Frodo's friend.  I still remember
+him very well from his role as Mikey Walsh in The Goonies.</dd>
+</dl>
+</div>
+</div>
+</div>
+</div>
+</body>
+</html>
